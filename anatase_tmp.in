@@ -1,0 +1,26 @@
+
+&control
+    calculation='scf'
+    restart_mode='from_scratch',
+    prefix='anatase_tmp',
+    pseudo_dir = './',
+    outdir='./'
+ /
+ &system
+    ibrav= 6, a=3.8804720602,c=8.7444000063, nat= 2, ntyp= 2,
+    ecutwfc =130.0,
+    occupations='smearing', smearing='methfessel-paxton', degauss=0.05
+ /
+ &electrons
+    conv_thr =  1.0d-8
+    mixing_beta = 0.7
+ /
+ATOMIC_SPECIES
+Ti 46.952 Ti.tpbe-sp-rrkj.UPF
+O 15.999 O_pbe-20071002.UPF
+ATOMIC_POSITIONS
+ Ti 0 0 0 
+ O -.0352946562 -.0352946562 .2315297708
+K_POINTS {automatic}
+ 4 4 4  0 0 0
+

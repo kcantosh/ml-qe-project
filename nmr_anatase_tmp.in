@@ -1,0 +1,8 @@
+&inputgipaw
+	job = 'efg'
+	prefix = 'anatase_tmp'
+	tmp_dir = './'
+	iverbosity = 1
+        q_gipaw = 0.01
+	q_efg(1)=0.3,q_efg(2)=0
+/
