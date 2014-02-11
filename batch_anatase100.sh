@@ -36,12 +36,12 @@ inpb="0.0 00 100 3000000 200000 0.0 10 10 9000000.0"
 
 
 #create some files with comment fields at the top
-echo "# Cq eta a c Ox Oy Oz" > anatase_rutile_runs1000.txt
-echo "# training data for Ox" > Ox_svm1000.txt
-echo "# training data for Oy" > Oy_svm1000.txt
-echo "# training data for Oz" > Oz_svm1000.txt
-echo "# training data for a" > a_svm1000.txt
-echo "# training data for c" > c_svm1000.txt
+echo "# Cq eta a c Ox Oy Oz" > anatase_rutile_runs100.txt
+echo "# training data for Ox" > Ox_svm100.txt
+echo "# training data for Oy" > Oy_svm100.txt
+echo "# training data for Oz" > Oz_svm100.txt
+echo "# training data for a" > a_svm100.txt
+echo "# training data for c" > c_svm100.txt
 
 echo " " 
 echo "Starting job on `hostname` at `date`" 
@@ -55,7 +55,7 @@ echo " "
 #	write features/values to text files
 #	iterate unit cell parameters for next iteration
 
-for (( i=1; i<=1000; i++ ))
+for (( i=1; i<=100; i++ ))
 do
 	
 
@@ -99,11 +99,11 @@ do
 	tdata=$(echo "$inpa $efg_vals $inpb" | ./sim_mas.x)
 	
 	#save svm training data
-	echo $a $tdata >> a_svm1000.txt
-	echo $c $tdata >> c_svm1000.txt
-	echo $Ox $tdata >> Ox_svm1000.txt
-	echo $Oy $tdata >> Oy_svm1000.txt
-	echo $Oz $tdata >> Oz_svm1000.txt
+	echo $a $tdata >> a_svm100.txt
+	echo $c $tdata >> c_svm100.txt
+	echo $Ox $tdata >> Ox_svm100.txt
+	echo $Oy $tdata >> Oy_svm100.txt
+	echo $Oz $tdata >> Oz_svm100.txt
 
 	fi
 
