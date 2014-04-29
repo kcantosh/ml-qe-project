@@ -5,7 +5,7 @@ function [new_data]=pca_comp(n)
 	% p==percentage noise	
 	load anatase_rutile_runs2000.txt;
 	foo=anatase_rutile_runs2000;
-	[neg b]=find(foo(:,1)<-1.5);
+	[neg b]=find(foo(:,1)<-0.95);
 	
 
 	load Ox_svm2000.txt;
@@ -18,7 +18,7 @@ function [new_data]=pca_comp(n)
 	test = anatase_rutile_runs2000;
 
 	%[neg dum]=find(test(:,1)<0);
-	neg=neg(1:300);
+	neg=neg(1:500);
 	f = Ox_svm2000(neg,2:513);
 
 	Ox = Ox_svm2000(neg,1);
@@ -27,14 +27,19 @@ function [new_data]=pca_comp(n)
 	aa = a_svm2000(neg,1);
 	cc = c_svm2000(neg,1);
 
-	inds=1:300;
+	inds=1:500;
 
-	[a b c] = svd(f(1:300,:));
+	[a b c] = svd(f(1:500,:));
+
+	tr_x_nn = f(inds,:)*c(:,1:n);
+	tr_y_nn = [Ox(inds), Oy(inds), Oz(inds), aa(inds), cc(inds)];
+	csvwrite(['trainx_nn.txt'],tr_x_nn);
+	csvwrite(['trainy_nn.txt'],tr_y_nn);
 
 	for k=0:9
 
-	start = k*30+1;
-	stop = (k+1)*30;
+	start = k*50+1;
+	stop = (k+1)*50;
 	test = start:stop;
 	train = setdiff(inds,test);
 
@@ -54,33 +59,4 @@ function [new_data]=pca_comp(n)
 
 
 	
-
-
-%for i=1:length(train)
-	%	for j=1:n-1
-	%	tmp=[num2str(tr_x(i,j)),','];
-	%	end
-	%	tmp=[tmp,num2str(tr_x(i,n))];
-	%
-	%	fprintf(fid1,'%s \n',tmp);
-
-	%	end
-
-	%	fclose(fid1);
-%for i=1:length(test)
-	%	for j=1:n-1
-	%	tmp=[num2str(test_x(i,j)),','];
-	%	end
-	%	tmp=[tmp,num2str(test_x(i,n))];
-	%
-	%	fprintf(fid2,'%s \n',tmp);
-	%
-	%	end
-
-	%	fclose(fid2);
-
-
-
-
-
 	end
