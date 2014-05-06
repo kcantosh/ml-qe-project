@@ -48,6 +48,7 @@ function [new_data]=scale_test()
 	csvwrite(['trainx_',num2str(n(k)),'_scale.txt'],tr_x);
 	csvwrite(['testx_',num2str(n(k)),'_scale.txt'],test_x);
 	
+	tic; system(["mimo-svr/bin/msvr.x trainx_",num2str(n(k)),"_scale.txt testx_",num2str(n(k)),"_scale.txt trainy_scale.txt testy_scale.txt rbf 0.8 6 0.1"]); toc;
 
 
 	end
