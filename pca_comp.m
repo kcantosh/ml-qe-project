@@ -32,7 +32,7 @@ function [new_data]=pca_comp(n)
 	[a b c] = svd(f(1:500,:));
 
 	tr_x_nn = f(inds,:)*c(:,1:n);
-	tr_y_nn = [Ox(inds), Oy(inds), Oz(inds), aa(inds), cc(inds)];
+	tr_y_nn = [Oy(inds), Oz(inds), aa(inds), cc(inds)];
 	csvwrite(['trainx_nn.txt'],tr_x_nn);
 	csvwrite(['trainy_nn.txt'],tr_y_nn);
 
@@ -48,8 +48,8 @@ function [new_data]=pca_comp(n)
 	tr_x = f(train,:)*c(:,1:n);
 	test_x = f(test,:)*c(:,1:n);
 
-	tr_y = [Ox(train), Oy(train), Oz(train), aa(train), cc(train)];
-	test_y = [Ox(test), Oy(test), Oz(test), aa(test), cc(test)];
+	tr_y = [Oy(train), Oz(train), aa(train), cc(train)];
+	test_y = [Oy(test), Oz(test), aa(test), cc(test)];
 
 
 	csvwrite(['trainx_',num2str(k),'.txt'],tr_x);

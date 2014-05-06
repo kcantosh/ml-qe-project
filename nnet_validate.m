@@ -23,13 +23,13 @@ load testy_9.txt;
 
 ln = length(pred0_clean);
 
-y(1,:) = sum((pred0_clean-testy_0).^2) / ln;
-y(2,:) = sum((pred1_clean-testy_1).^2) / ln;
-y(3,:) = sum((pred2_clean-testy_2).^2) / ln;
-y(4,:) = sum((pred3_clean-testy_3).^2) / ln;
-y(5,:) = sum((pred4_clean-testy_4).^2) / ln;
-y(6,:) = sum((pred5_clean-testy_5).^2) / ln;
-y(7,:) = sum((pred6_clean-testy_6).^2) / ln;
-y(8,:) = sum((pred7_clean-testy_7).^2) / ln;
-y(9,:) = sum((pred8_clean-testy_8).^2) / ln;
-y(10,:) = sum((pred9_clean-testy_9).^2) / ln;
+y(1,:) = sqrt(sum((pred0_clean-testy_0).^2) / ln);
+y(2,:) = sqrt(sum((pred1_clean-testy_1).^2) / ln);
+y(3,:) = sqrt(sum((pred2_clean-testy_2).^2) / ln);
+y(4,:) = sqrt(sum((pred3_clean-testy_3).^2) / ln);
+y(5,:) = sqrt(sum((pred4_clean-testy_4).^2) / ln);
+y(6,:) = sqrt(sum((pred5_clean-testy_5).^2) / ln);
+y(7,:) = sqrt(sum((pred6_clean-testy_6).^2) / ln);
+y(8,:) = sqrt(sum((pred7_clean-testy_7).^2) / ln);
+y(9,:) = sqrt(sum((pred8_clean-testy_8).^2) / ln);
+y(10,:) = sqrt(sum((pred9_clean-testy_9).^2) / ln);

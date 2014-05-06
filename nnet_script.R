@@ -2,60 +2,60 @@ library("nnet")
 testInput<-read.csv('testx_0.txt',header=FALSE)
 trainInput<-read.csv('trainx_0.txt',header=FALSE)
 trainOutput<-read.csv('trainy_0.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred0.csv')
 testInput<-read.csv('testx_1.txt',header=FALSE)
 trainInput<-read.csv('trainx_1.txt',header=FALSE)
 trainOutput<-read.csv('trainy_1.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred1.csv')
 testInput<-read.csv('testx_2.txt',header=FALSE)
 trainInput<-read.csv('trainx_2.txt',header=FALSE)
 trainOutput<-read.csv('trainy_2.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred2.csv')
 testInput<-read.csv('testx_3.txt',header=FALSE)
 trainInput<-read.csv('trainx_3.txt',header=FALSE)
 trainOutput<-read.csv('trainy_3.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred3.csv')
 testInput<-read.csv('testx_4.txt',header=FALSE)
 trainInput<-read.csv('trainx_4.txt',header=FALSE)
 trainOutput<-read.csv('trainy_4.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred4.csv')
 testInput<-read.csv('testx_5.txt',header=FALSE)
 trainInput<-read.csv('trainx_5.txt',header=FALSE)
 trainOutput<-read.csv('trainy_5.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred5.csv')
 testInput<-read.csv('testx_6.txt',header=FALSE)
 trainInput<-read.csv('trainx_6.txt',header=FALSE)
 trainOutput<-read.csv('trainy_6.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred6.csv')
 testInput<-read.csv('testx_7.txt',header=FALSE)
 trainInput<-read.csv('trainx_7.txt',header=FALSE)
 trainOutput<-read.csv('trainy_7.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred7.csv')
 testInput<-read.csv('testx_8.txt',header=FALSE)
 trainInput<-read.csv('trainx_8.txt',header=FALSE)
 trainOutput<-read.csv('trainy_8.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred8.csv')
 testInput<-read.csv('testx_9.txt',header=FALSE)
 trainInput<-read.csv('trainx_9.txt',header=FALSE)
 trainOutput<-read.csv('trainy_9.txt',header=FALSE)
-neuralNetworkModel<-nnet(trainInput,trainOutput,size=91,linout=T,skip=T,decay=5e-2,maxit=20000);
+neuralNetworkModel<-nnet(trainInput,trainOutput,size=4,linout=T,skip=T,decay=5e-2,maxit=20000);
 predOutput<-predict(neuralNetworkModel, testInput)
 write.csv(predOutput,'pred9.csv')
