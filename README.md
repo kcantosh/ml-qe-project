@@ -16,3 +16,9 @@ pca_comp.m will allow you to compress the data and create 10 data folds for trai
 #step 4; machine learning
 msvr (multiple-input, multiple-output SVR) will need to be calibrated, particularly the constants epsilon and C need tuning. This is all accomplished using the calibrate.m script eg., run in octave thusly:
 out =calibrate;
+
+For the ANN :
+R --no-save < nnet_script.R
+then cleanup the files for octave:
+./clean_comp.sh
+and check results in octave with nnet_validate; should be four columns of output, one row per datafold (10 total). 
